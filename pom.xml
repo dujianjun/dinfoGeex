@@ -16,16 +16,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.dynatrace.adk</groupId>
-            <artifactId>dynatrace-adk</artifactId>
-            <version>${dynatrace-adk.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.dynatrace.dubbo</groupId>
-            <artifactId>dynatrace-dubbo</artifactId>
-            <version>${dynatrace-dubbo.version}</version>
-        </dependency>
-        <dependency>
             <groupId>com.ctrip.framework.apollo</groupId>
             <artifactId>apollo-client</artifactId>
             <version>0.10.0-SNAPSHOT</version>
@@ -153,20 +143,6 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
-
-
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>dubbo</artifactId>
-            <version>${dubbo_version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>log4j</groupId>
-                    <artifactId>log4j</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
         <dependency>
             <groupId>com.github.sgroschupf</groupId>
             <artifactId>zkclient</artifactId>
@@ -422,11 +398,6 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>com.gilt.flume</groupId>
-            <artifactId>logback-flume-appender</artifactId>
-            <version>0.1.8</version>
-        </dependency>
-        <dependency>
             <!--支持if/else表达式[061]-->
             <groupId>org.codehaus.janino</groupId>
             <artifactId>janino</artifactId>
@@ -469,14 +440,22 @@
             <artifactId>druid</artifactId>
             <version>0.2.20</version>
         </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>javax.mail-api</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+        <dependency >
+            <groupId >com.sun.mail </groupId >
+            <artifactId >javax.mail </artifactId >
+            <version >1.5.4 </version >
+        </dependency >
+
     </dependencies>
 
     <properties>
-        <dynatrace-adk.version>7.0</dynatrace-adk.version>
-        <dynatrace-dubbo.version>7.0</dynatrace-dubbo.version>
         <spring.bom.version>4.3.1.RELEASE</spring.bom.version>
         <spring.version>4.3.1.RELEASE</spring.version>
-        <dubbo_version>2.8.4-SNAPSHOT</dubbo_version>
         <zkclient_version>0.1</zkclient_version>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
@@ -486,39 +465,6 @@
         <logback_version>1.0.6</logback_version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-   <!-- <distributionManagement>
-        <repository>
-            <id>maven-releases</id>
-            <name>maven-releases</name>
-            <url>http://maven.geexfinance.com:8081/maven/repository/maven-releases/</url>
-            <uniqueVersion>true</uniqueVersion>
-        </repository>
-        <snapshotRepository>
-            <id>maven-snapshots</id>
-            <name>maven-snapshots</name>
-            <url>http://maven.geexfinance.com:8081/maven/repository/maven-snapshots/</url>
-            <uniqueVersion>true</uniqueVersion>
-        </snapshotRepository>
-    </distributionManagement>
-
-
-    <repositories>
-        <repository>
-            <id>maven-public</id>
-            <name>maven-public</name>
-            <url>http://maven.geexfinance.com:8081/maven/repository/maven-public/</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>-->
-
     <build>
         <plugins>
             <plugin>
@@ -587,8 +533,6 @@
                 <geex-dataSource-version>${project.parent.version}</geex-dataSource-version>
             </properties>
         </profile>
-
-
     </profiles>
 
 </project>

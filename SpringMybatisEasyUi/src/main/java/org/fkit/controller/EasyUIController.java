@@ -25,13 +25,13 @@ import java.util.Map;
 public class EasyUIController {
 
 
-    @RequestMapping(value = "/selectAllUser",
-            produces = MediaType.APPLICATION_JSON_VALUE + ";charset=UTF-8")
+    @RequestMapping(value = "/selectAllUser",produces = MediaType.APPLICATION_JSON_VALUE + ";charset=UTF-8")
     public DataGridResult selectAllUser() {
 
         JDBCUtil jdbcUtil = new JDBCUtil();
         jdbcUtil.getConnection();
-        List<User> users = new ArrayList<User>();
+        List<User> users = new ArrayList<>();
+        DataGridResult resu = null;
         try {
             List<Map<String, Object>> result = jdbcUtil.findResult("select * from users", null);
             for (int i = 0; i < result.size(); i++) {
@@ -47,13 +47,12 @@ public class EasyUIController {
                 user.setPhone(phone);
                 users.add(user);
             }
-            DataGridResult resu = new DataGridResult(users.size(),
-                    users);
-            return resu;
+              resu = new DataGridResult(users.size(), users);
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return resu;
     }
 
 
