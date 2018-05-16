@@ -89,13 +89,14 @@
 </head>
 <body>
 <h2>Basic CRUD Application</h2>
+
 <div class="demo-info" style="margin-bottom:10px">
     <div class="demo-tip icon-tip">&nbsp;</div>
     <div>Click the buttons on datagrid toolbar to do crud actions.</div>
 </div>
 
 <table id="dg" title="My Users" class="easyui-datagrid" style="width:550px;height:250px"
-       url="/myWeb/easyui/selectAllUser"
+       url="/SpringMybatisEasyUi/easyui/selectAllUser"
        toolbar="#toolbar"
        rownumbers="true" fitColumns="true" singleSelect="true">
     <thead>

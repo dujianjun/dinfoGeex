@@ -1,4 +1,4 @@
-package org.fkit.utils;
+package org.fkit.model;
 
 import java.util.List;
 
@@ -10,6 +10,10 @@ import java.util.List;
  * version 1.0
  */
 public class DataGridResult {
+
+    public DataGridResult() {
+    }
+
     public DataGridResult(int total, List<?> rows) {
         this.total = total;
         this.rows = rows;

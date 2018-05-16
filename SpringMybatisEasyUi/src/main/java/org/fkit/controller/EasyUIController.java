@@ -1,11 +1,12 @@
 package org.fkit.controller;
 
 import org.fkit.model.User;
-import org.fkit.utils.DataGridResult;
+import org.fkit.model.DataGridResult;
 import org.fkit.utils.JDBCUtil;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -25,8 +26,14 @@ import java.util.Map;
 public class EasyUIController {
 
 
+    @RequestMapping("/fundLoan")
+    public ModelAndView fundLoan() {
+        return new ModelAndView("/easyUi1");
+    }
+
+
     @RequestMapping(value = "/selectAllUser",produces = MediaType.APPLICATION_JSON_VALUE + ";charset=UTF-8")
-    public DataGridResult selectAllUser() {
+    public DataGridResult selectAllUser(User user) {
 
         JDBCUtil jdbcUtil = new JDBCUtil();
         jdbcUtil.getConnection();
@@ -36,7 +43,7 @@ public class EasyUIController {
             List<Map<String, Object>> result = jdbcUtil.findResult("select * from users", null);
             for (int i = 0; i < result.size(); i++) {
                 Map<String, Object> map = result.get(i);
-                User user = new User();
+              //  User user = new User();
                 String firstname = (String) map.get("firstname");
                 String lastname = (String) map.get("lastname");
                 String phone = (String) map.get("phone");

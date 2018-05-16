@@ -38,13 +38,13 @@ public class JDBCUtil {
      */
     public static void loadConfig() {
         try {
-            InputStream inStream = JDBCUtil.class.getResourceAsStream("/jdbc1.properties");
+            InputStream inStream = JDBCUtil.class.getResourceAsStream("/db.properties");
             Properties prop = new Properties();
             prop.load(inStream);
-            USERNAME = prop.getProperty("jdbc.username");
-            PASSWORD = prop.getProperty("jdbc.password");
-            DRIVER= prop.getProperty("jdbc.driver");
-            URL = prop.getProperty("jdbc.url");
+            USERNAME = prop.getProperty("dataSource.user");
+            PASSWORD = prop.getProperty("dataSource.password");
+            DRIVER= prop.getProperty("dataSource.driverClass");
+            URL = prop.getProperty("dataSource.jdbcUrl");
         } catch (Exception e) {
             throw new RuntimeException("读取数据库配置文件异常！", e);
         }
