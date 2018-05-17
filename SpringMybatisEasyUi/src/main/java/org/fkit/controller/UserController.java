@@ -1,8 +1,11 @@
 package org.fkit.controller;
 
+import org.fkit.dao.UserDao;
 import org.fkit.model.User;
 import org.fkit.model.DataGridResult;
+import org.fkit.service.UserService;
 import org.fkit.utils.JDBCUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,17 +25,31 @@ import java.util.Map;
  */
 
 @RestController
-@RequestMapping(value = "/easyui")
-public class EasyUIController {
+@RequestMapping(value = "/user")
+public class UserController {
 
 
-    @RequestMapping("/fundLoan")
+
+    @Autowired
+    private UserService userService;
+
+
+  /*  @RequestMapping("/user")
     public ModelAndView fundLoan() {
         return new ModelAndView("/easyUi1");
+    }*/
+
+
+    @RequestMapping(value = "/getAllUser",produces = MediaType.APPLICATION_JSON_VALUE + ";charset=UTF-8")
+    public DataGridResult getAllUser(User user) {
+        List<User> allUser = userService.getAllUser();
+        DataGridResult  resu = new DataGridResult(allUser.size(),allUser);
+        return resu;
     }
 
 
-    @RequestMapping(value = "/selectAllUser",produces = MediaType.APPLICATION_JSON_VALUE + ";charset=UTF-8")
+
+  /*  @RequestMapping(value = "/selectAllUser",produces = MediaType.APPLICATION_JSON_VALUE + ";charset=UTF-8")
     public DataGridResult selectAllUser(User user) {
 
         JDBCUtil jdbcUtil = new JDBCUtil();
@@ -60,7 +77,7 @@ public class EasyUIController {
             e.printStackTrace();
         }
         return resu;
-    }
+    }*/
 
 
 

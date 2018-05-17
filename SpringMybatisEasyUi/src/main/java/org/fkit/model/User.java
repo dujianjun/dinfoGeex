@@ -7,7 +7,7 @@ package org.fkit.model;
  * Date:2018-03-27  16:44  星期二
  * version 1.0
  */
-public class User extends DataGridResult{
+public class User{
     private  String firstname;
     private  String lastname;
     private  String phone;

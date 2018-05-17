@@ -7,6 +7,7 @@
           <element id="module-output" name="SpringMybatisEasyUi" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.1.26" />
           <element id="library" level="project" name="Maven: com.ctrip.framework.apollo:apollo-client:0.10.0-SNAPSHOT" />
           <element id="library" level="project" name="Maven: com.ctrip.framework.apollo:apollo-core:0.10.0-SNAPSHOT" />
           <element id="library" level="project" name="Maven: com.google.inject:guice:4.1.0" />

@@ -96,7 +96,7 @@
 </div>
 
 <table id="dg" title="My Users" class="easyui-datagrid" style="width:550px;height:250px"
-       url="/SpringMybatisEasyUi/easyui/selectAllUser"
+       url="/SpringMybatisEasyUi/user/getAllUser"
        toolbar="#toolbar"
        rownumbers="true" fitColumns="true" singleSelect="true">
     <thead>
