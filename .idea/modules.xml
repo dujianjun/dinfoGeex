@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SpringMybatisEasyUi/SpringMybatisEasyUi.iml" filepath="$PROJECT_DIR$/SpringMybatisEasyUi/SpringMybatisEasyUi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.du.iml" filepath="$PROJECT_DIR$/com.du.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMybatisEasyUi/com.jian.iml" filepath="$PROJECT_DIR$/SpringMybatisEasyUi/com.jian.iml" />
       <module fileurl="file://$PROJECT_DIR$/connmon/connmon.iml" filepath="$PROJECT_DIR$/connmon/connmon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dinfoGeex.iml" filepath="$PROJECT_DIR$/dinfoGeex.iml" />
     </modules>
   </component>
 </project>
