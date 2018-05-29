@@ -11,7 +11,7 @@ import java.util.List;
  * Date:2018-05-17  16:17  星期四
  * version 1.0
  */
-public interface UserMepper {
+public interface UserDao {
 
   List<User> getAllUser();
 

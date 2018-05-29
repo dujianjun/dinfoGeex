@@ -1,5 +1,6 @@
 package org.fkit.controller;
 
+import org.fkit.dao.UserDao;
 import org.fkit.model.User;
 import org.fkit.model.DataGridResult;
 import org.fkit.service.UserService;
@@ -25,7 +26,7 @@ public class UserController {
 
 
     @Autowired
-    private UserService userService;
+    private UserDao userDao;
 
 
   /*  @RequestMapping("/user")
@@ -36,7 +37,7 @@ public class UserController {
 
     @RequestMapping(value = "/getAllUser",produces = MediaType.APPLICATION_JSON_VALUE + ";charset=UTF-8")
     public DataGridResult getAllUser(User user) {
-        List<User> allUser = userService.getAllUser();
+        List<User> allUser = userDao.getAllUser();
         DataGridResult  resu = new DataGridResult(allUser.size(),allUser);
         return resu;
     }
