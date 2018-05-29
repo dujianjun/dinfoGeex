@@ -1,20 +1,14 @@
 package org.fkit.controller;
 
-import org.fkit.dao.UserDao;
 import org.fkit.model.User;
 import org.fkit.model.DataGridResult;
 import org.fkit.service.UserService;
-import org.fkit.utils.JDBCUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Description:
@@ -78,19 +72,4 @@ public class UserController {
         }
         return resu;
     }*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

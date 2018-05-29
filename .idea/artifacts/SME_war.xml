@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SME:war">
+    <output-path>$PROJECT_DIR$/SME/target</output-path>
+    <root id="archive" name="SME-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="SME:war exploded" />
+    </root>
+  </artifact>
+</component>

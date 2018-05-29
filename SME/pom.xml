@@ -3,17 +3,17 @@
     <parent>
         <groupId>com.fkit</groupId>
         <artifactId>dinfoGeex</artifactId>
-        <version>1.2-SNAPSHOT</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
     <groupId>com.fkit</groupId>
-    <artifactId>SpringMybatisEasyUi</artifactId>
+    <artifactId>SME</artifactId>
     <modelVersion>4.0.0</modelVersion>
     <packaging>war</packaging>
 
     <dependencies>
         <dependency>
-            <groupId>com.du</groupId>
+            <groupId>com.fkit</groupId>
             <artifactId>connmon</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>

@@ -6,16 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="com.du" />
         <module name="com.jian" />
         <module name="connmon" />
+        <module name="SME" />
+        <module name="SpringMybatisEasyUi" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="com.du" target="1.7" />
+      <module name="com.fkit" target="1.7" />
       <module name="com.jian" target="1.7" />
       <module name="connmon" target="1.8" />
       <module name="dinfoGeex" target="1.7" />
+      <module name="SME" target="1.7" />
       <module name="SpringMybatisEasyUi" target="1.7" />
     </bytecodeTargetLevel>
   </component>

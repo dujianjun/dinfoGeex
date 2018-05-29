@@ -1,6 +1,6 @@
 package org.fkit.service.Impl;
 
-import org.fkit.dao.UserDao;
+import org.fkit.dao.UserMepper;
 import org.fkit.model.User;
 import org.fkit.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,13 +17,13 @@ import java.util.List;
 public class UserServiceImpl implements UserService{
 
     @Autowired
-    private UserDao userDao;
+    private UserMepper userMepper;
 
 
     @Override
     public List<User> getAllUser() {
 
-        List<User> allUser = userDao.getAllUser();
+        List<User> allUser = userMepper.getAllUser();
 
         return allUser;
     }
