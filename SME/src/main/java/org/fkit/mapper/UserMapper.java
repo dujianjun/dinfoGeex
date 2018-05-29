@@ -1,5 +1,6 @@
-package org.fkit.dao;
+package org.fkit.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.fkit.model.User;
 
 import java.util.List;
@@ -11,7 +12,8 @@ import java.util.List;
  * Date:2018-05-17  16:17  星期四
  * version 1.0
  */
-public interface UserDao {
+
+public interface UserMapper {
 
   List<User> getAllUser();
 
