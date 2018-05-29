@@ -1,4 +1,4 @@
-package geek.common.example.Java;
+package com.fkit.example.Java;
 
 
 

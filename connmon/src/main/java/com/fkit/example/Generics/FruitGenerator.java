@@ -1,4 +1,4 @@
-package geek.common.example.Generics;
+package com.fkit.example.Generics;
 
 /**
  * Description:

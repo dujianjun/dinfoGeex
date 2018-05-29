@@ -24,7 +24,7 @@
  * <http://www.apache.org/>.
  *
  */
-package geek.common.example.httpClient;
+package com.fkit.example.httpClient;
 
 import java.util.ArrayList;
 import java.util.List;
