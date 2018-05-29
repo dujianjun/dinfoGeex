@@ -1,6 +1,5 @@
 package org.fkit.mapper;
 
-import org.apache.ibatis.annotations.Mapper;
 import org.fkit.model.User;
 
 import java.util.List;
