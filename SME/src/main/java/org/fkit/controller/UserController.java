@@ -22,16 +22,8 @@ import java.util.List;
 @RequestMapping(value = "/user")
 public class UserController {
 
-
-
     @Autowired
     private UserService userService;
-
-
-  /*  @RequestMapping("/user")
-    public ModelAndView fundLoan() {
-        return new ModelAndView("/easyUi1");
-    }*/
 
 
     @RequestMapping(value = "/getAllUser",produces = MediaType.APPLICATION_JSON_VALUE + ";charset=UTF-8")
