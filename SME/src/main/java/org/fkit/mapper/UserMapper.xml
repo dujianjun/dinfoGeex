@@ -12,7 +12,7 @@
     </resultMap>
 
     <select id="getAllUser" resultMap="userResultMap">
-        select * from users
+        select * from T_USER
     </select>
 
 </mapper>
