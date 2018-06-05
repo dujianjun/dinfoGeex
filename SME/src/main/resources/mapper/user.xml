@@ -4,7 +4,7 @@
 <mapper namespace="org.fkit.dao.UserMepper">
 
     <select id="getAllUser" resultMap="org.fkit.model.User">
-        select * from users
+        select * from T_USERS
     </select>
 
 </mapper>
