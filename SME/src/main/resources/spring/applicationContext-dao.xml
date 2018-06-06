@@ -10,43 +10,6 @@
     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
-    <!-- 加载配置文件 -->
-    <context:property-placeholder location="classpath:db.properties" />
-    <!-- 数据库连接池 -->
-    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-        <!-- 配置连接池属性 -->
-        <property name="driverClass" value="${jdbc.driver}"/>
-        <property name="jdbcUrl" value="${jdbc.url}"/>
-        <property name="user" value="${jdbc.username}"/>
-        <property name="password" value="${jdbc.password}"/>
-
-        <!-- c3p0连接池的私有属性 -->
-        <property name="maxPoolSize" value="30"/>
-        <property name="minPoolSize" value="10"/>
-        <!-- 关闭连接后不自动commit -->
-        <property name="autoCommitOnClose" value="false"/>
-        <!-- 获取连接超时时间 -->
-        <property name="checkoutTimeout" value="10000"/>
-        <!-- 当获取连接失败重试次数 -->
-        <property name="acquireRetryAttempts" value="2"/>
-    </bean>
-   <!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
-          destroy-method="close">
-        <property name="driverClassName" value="${dataSource.driverClass}" />
-        <property name="url" value="${dataSource.jdbcUrl}" />
-        <property name="username" value="${dataSource.user}" />
-        <property name="password" value="${dataSource.password}" />
-        <property name="maxActive" value="10" />
-        <property name="maxIdle" value="5" />
-    </bean>-->
-    <!-- mapper配置 -->
-    <!-- 让spring管理sqlsessionfactory 使用mybatis和spring整合包中的 -->
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <!-- 数据库连接池 -->
-        <property name="dataSource" ref="dataSource" />
-        <!-- 加载mybatis的全局配置文件，虽然这个全局配置文件是空的，但是这个全局配置文件是必不可少的 -->
-       <!-- <property name="configLocation" value="classpath:SqlMapConfig.xml" />-->
-    </bean>
     <!-- 配置Mapper扫描器 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="org.fkit.mapper"/>
