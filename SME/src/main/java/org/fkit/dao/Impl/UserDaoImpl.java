@@ -15,14 +15,16 @@ import java.util.List;
  * Date:2018-06-06  10:26  星期三
  * version 1.0
  */
-public class UserDaoImpl  implements UserDao {
-
-    @Autowired
-    private  UserDao userDao;
-
-
+public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao {
+    @Override
     public List<User> getAllUser() {
-        List<User> users = userDao.getAllUser();
-        return users;
+        return getAllUser();
     }
+
+
+
+   /* public List<User> getAllUser() {
+        List<User> users = getAllUser();
+        return users;
+    }*/
 }

@@ -1,5 +1,6 @@
 package org.fkit.service.Impl;
 
+import org.fkit.dao.Impl.UserDaoImpl;
 import org.fkit.dao.UserDao;
 import org.fkit.model.User;
 import org.fkit.service.UserService;
@@ -19,8 +20,15 @@ import java.util.List;
 public class UserServiceImpl implements UserService{
 
     @Autowired
-    private UserDao userDao;
+    private UserDaoImpl userDao;
 
+    public UserDaoImpl getUserDao() {
+        return userDao;
+    }
+
+    public void setUserDao(UserDaoImpl userDao) {
+        this.userDao = userDao;
+    }
 
     @Override
     public List<User> getAllUser() {

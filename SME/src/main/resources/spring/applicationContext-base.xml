@@ -45,6 +45,6 @@
         <!-- 数据库连接池 -->
         <property name="dataSource" ref="dataSource" />
         <!-- 加载mybatis的全局配置文件，虽然这个全局配置文件是空的，但是这个全局配置文件是必不可少的 -->
-        <!-- <property name="configLocation" value="classpath:SqlMapConfig.xml" />-->
+         <property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml" />
     </bean>
 </beans>
