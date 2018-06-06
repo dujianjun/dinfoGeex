@@ -10,8 +10,10 @@
     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
-    <!-- 配置Mapper扫描器 -->
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="org.fkit.mapper"/>
+    <bean id="userDaoImpl" class="org.fkit.dao.Impl.UserDaoImpl">
+        <!-- 注入sqlSessionFactory这个属性 -->
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
     </bean>
+
+
 </beans>
