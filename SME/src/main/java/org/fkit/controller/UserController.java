@@ -25,6 +25,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+
     @RequestMapping(value = "/getAllUser",produces = MediaType.APPLICATION_JSON_VALUE + ";charset=UTF-8")
     public DataGridResult getAllUser(User user) {
         List<User> allUser = userService.getAllUser();

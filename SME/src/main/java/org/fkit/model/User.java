@@ -1,5 +1,7 @@
 package org.fkit.model;
 
+import javax.persistence.*;
+
 /**
  * Description:
  * Program Name:
@@ -7,11 +9,34 @@ package org.fkit.model;
  * Date:2018-03-27  16:44  星期二
  * version 1.0
  */
+
+@Table(name = "users")
 public class User{
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private  Integer id;
+
+    @Column(name = "firstname")
     private  String firstname;
+
+    @Column(name = "lastname")
     private  String lastname;
+
+    @Column(name = "phone")
     private  String phone;
+
+    @Column(name = "email")
     private  String email;
+
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getFirstname() {
         return firstname;
