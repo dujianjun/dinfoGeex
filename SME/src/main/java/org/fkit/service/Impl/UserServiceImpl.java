@@ -1,6 +1,5 @@
 package org.fkit.service.Impl;
 
-import org.fkit.dao.UserDao;
 import org.fkit.model.User;
 import org.fkit.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
