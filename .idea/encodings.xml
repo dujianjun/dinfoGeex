@@ -3,6 +3,7 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="GBK">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SME" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SME/src/main/resources/mybatis/SqlMapConfig.xml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/connmon" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/connmon/src/main/java/com/fkit/example/Generics/GenericMethodTest.java" charset="GBK" />
     <file url="PROJECT" charset="GBK" />

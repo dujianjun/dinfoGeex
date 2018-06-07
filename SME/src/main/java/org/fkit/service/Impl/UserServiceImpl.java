@@ -20,15 +20,8 @@ import java.util.List;
 public class UserServiceImpl implements UserService{
 
     @Autowired
-    private UserDaoImpl userDao;
+    private UserDao userDao;
 
-    public UserDaoImpl getUserDao() {
-        return userDao;
-    }
-
-    public void setUserDao(UserDaoImpl userDao) {
-        this.userDao = userDao;
-    }
 
     @Override
     public List<User> getAllUser() {

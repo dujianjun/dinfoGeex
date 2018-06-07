@@ -4,7 +4,6 @@ import org.apache.ibatis.session.SqlSession;
 import org.fkit.dao.UserDao;
 import org.fkit.model.User;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -16,15 +15,12 @@ import java.util.List;
  * version 1.0
  */
 public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao {
+
     @Override
     public List<User> getAllUser() {
-        return getAllUser();
+        SqlSession sqlSession = getSqlSession();
+        List<User> users = sqlSession.selectList("userDao.getAllUser");
+        return users;
     }
 
-
-
-   /* public List<User> getAllUser() {
-        List<User> users = getAllUser();
-        return users;
-    }*/
 }

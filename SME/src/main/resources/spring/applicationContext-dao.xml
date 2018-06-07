@@ -12,7 +12,7 @@
 
     <!-- dao怎么配置-->
 
-    <bean id="userDaoImpl" class="org.fkit.dao.Impl.UserDaoImpl">
+    <bean id="userDao" class="org.fkit.dao.Impl.UserDaoImpl">
         <!-- 注入sqlSessionFactory这个属性 -->
         <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
     </bean>

@@ -14,7 +14,9 @@
    <!-- <context:component-scan base-package="org.fkit.service"></context:component-scan>-->
 
     <bean id="userService" class="org.fkit.service.Impl.UserServiceImpl">
-        <property name="userDao" ref="userDaoImpl"></property>
+        <!--<property name="userDao" ref="userDao"/>-->
     </bean>
 
 </beans>
+            
+
