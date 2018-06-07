@@ -1,5 +1,10 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
 *.iml
-out
-gen
+
+web.xml
+target
+classes
+lib
+/connmon/connmon.iml
+/dinfoGeex.iml
