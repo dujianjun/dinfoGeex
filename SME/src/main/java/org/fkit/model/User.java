@@ -1,6 +1,7 @@
 package org.fkit.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Description:
@@ -11,7 +12,7 @@ import javax.persistence.*;
  */
 
 @Table(name = "users")
-public class User{
+public class User implements Serializable{
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
