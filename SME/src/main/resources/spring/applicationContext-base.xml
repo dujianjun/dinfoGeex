@@ -31,15 +31,7 @@
         <!-- 当获取连接失败重试次数 -->
         <property name="acquireRetryAttempts" value="2"/>
     </bean>
-    <!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
-           destroy-method="close">
-         <property name="driverClassName" value="${dataSource.driverClass}" />
-         <property name="url" value="${dataSource.jdbcUrl}" />
-         <property name="username" value="${dataSource.user}" />
-         <property name="password" value="${dataSource.password}" />
-         <property name="maxActive" value="10" />
-         <property name="maxIdle" value="5" />
-     </bean>-->
+
     <!-- mapper配置 -->
     <!-- 让spring管理sqlsessionfactory 使用mybatis和spring整合包中的 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
