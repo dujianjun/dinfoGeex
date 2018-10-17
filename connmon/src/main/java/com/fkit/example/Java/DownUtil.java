@@ -7,7 +7,11 @@ import java.net.*;
 
 public class DownUtil
 {
-	// 定义下载资源的路径
+	// 定义下载资源
+	//
+	//
+	//
+	// 的路径
 	private String path;
 	// 指定所下载的文件的保存位置
 	private String targetFile;
