@@ -11,7 +11,7 @@ import java.io.Serializable;
  * version 1.0
  */
 
-@Table(name = "users")
+@Table(name = "t_users")
 public class User implements Serializable{
     @Id
     @Column(name = "id")

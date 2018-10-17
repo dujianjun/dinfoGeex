@@ -17,8 +17,8 @@
       <module name="com.fkit" target="1.7" />
       <module name="com.jian" target="1.7" />
       <module name="connmon" target="1.8" />
-      <module name="dinfoGeex" target="1.8" />
-      <module name="SME" target="1.8" />
+      <module name="dinfoGeex" target="1.5" />
+      <module name="SME" target="1.5" />
       <module name="SpringMybatisEasyUi" target="1.7" />
     </bytecodeTargetLevel>
   </component>
