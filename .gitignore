@@ -23,6 +23,10 @@ target/
 *.ipr
 *.iml
 *.iws
+web.xml
+target
+classes
+lib
 
 # temp file
 
